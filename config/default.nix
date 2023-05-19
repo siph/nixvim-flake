@@ -4,6 +4,7 @@
     ./bufferline.nix
     ./core.nix
     ./gruvbox.nix
+    ./nvim-cmp.nix
     ./telescope.nix
   ];
 }
