@@ -4,5 +4,6 @@
     ./bufferline.nix
     ./core.nix
     ./gruvbox.nix
+    ./telescope.nix
   ];
 }
