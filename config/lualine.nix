@@ -11,7 +11,14 @@
       right = "";
     };
     sections = {
-      lualine_c = [ "filename" ];
+      lualine_c = [
+        {
+          name = "filename";
+          extraConfig = {
+            path = 1;
+          };
+        }
+      ];
     };
   };
 }
