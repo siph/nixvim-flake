@@ -1,6 +1,7 @@
 {
   # Import all your configuration modules here
   imports = [
+    ./autopairs.nix
     ./bufferline.nix
     ./core.nix
     ./gruvbox.nix
