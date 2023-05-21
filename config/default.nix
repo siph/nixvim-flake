@@ -5,6 +5,7 @@
     ./bufferline.nix
     ./core.nix
     ./gruvbox.nix
+    ./indent-blankline.nix
     ./lsp.nix
     ./lualine.nix
     ./nvim-cmp.nix
