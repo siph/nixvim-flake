@@ -7,7 +7,7 @@
         { name = "buffer"; }
         { name = "path"; }
         { name = "treesitter"; }
-        { name = "nvim_lsp:nil_ls"; }
+        { name = "nvim_lsp"; }
       ];
     mapping = {
       "<C-b>" = "cmp.mapping.scroll_docs(-4)";
@@ -18,7 +18,7 @@
                         { name = "buffer" },
                         { name = "path" },
                         { name = "treesitter" },
-                        { name = "nvim_lsp:nil_ls" },
+                        { name = "nvim_lsp" },
                       }
                     }
                   })'';
@@ -29,8 +29,6 @@
           function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
-            elseif check_backspace() then
-              fallback()
             else
               fallback()
             end
