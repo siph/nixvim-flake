@@ -18,5 +18,8 @@
     lspsaga = {
       enable = true;
     };
+    rust-tools = {
+      enable = true;
+    };
   };
 }
