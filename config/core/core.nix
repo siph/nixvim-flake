@@ -5,9 +5,11 @@
   maps = {
     normal = {
       "<leader>q" = {
+        desc = "Quit NeoVim";
         action = "<cmd>qa<CR>";
       };
       "<leader>w" = {
+        desc = "Save Current Buffer";
         action = "<cmd>w<CR>";
       };
 

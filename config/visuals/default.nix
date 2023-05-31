@@ -5,5 +5,6 @@
     ./indent-blankline.nix
     ./noice.nix
     ./notify.nix
+    ./which-key.nix
   ];
 }

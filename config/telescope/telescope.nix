@@ -1,13 +1,29 @@
 {
   plugins.telescope = {
     enable = true;
-    keymaps = {
-      "<leader>ff" = "find_files";
-      "<leader>fg" = "live_grep";
-      "<leader>fb" = "buffers";
-      "<leader>fh" = "help_tags";
-      "<leader>fs" = "treesitter";
+  };
+  maps = {
+    normal = {
+      "<leader>ff" = {
+        desc = "Find Files";
+        action = "<cmd>lua require('telescope.builtin').find_files()<CR>";
+      };
+      "<leader>fg" = {
+        desc = "Grep Files";
+        action = "<cmd>lua require('telescope.builtin').live_grep()<CR>";
+      };
+      "<leader>fb" = {
+        desc = "Find Buffer";
+        action = "<cmd>lua require('telescope.builtin').buffers()<CR>";
+      };
+      "<leader>fh" = {
+        desc = "Find Help";
+        action = "<cmd>lua require('telescope.builtin').help_tags()<CR>";
+      };
+      "<leader>ft" = {
+        desc = "Find Treesitter";
+        action = "<cmd>lua require('telescope.builtin').treesitter()<CR>";
+      };
     };
   };
-  maps.normal."<leader>ft".action = "<cmd> Telescope<CR>";
 }
