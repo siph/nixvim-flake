@@ -4,6 +4,7 @@
     ./autopairs.nix
     ./bufferline.nix
     ./core.nix
+    ./gitsigns.nix
     ./gruvbox.nix
     ./indent-blankline.nix
     ./lsp.nix

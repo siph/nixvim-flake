@@ -15,7 +15,8 @@
     nixvim,
     flake-utils,
     ...
-  } @ inputs: let
+  }:
+  let
     config = import ./config; # import the module directly
   in
     flake-utils.lib.eachDefaultSystem (system: let

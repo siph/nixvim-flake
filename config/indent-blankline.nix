@@ -3,7 +3,7 @@
     enable = true;
     char = "";
     useTreesitter = true;
-    showCurrentContext = true;
+    showCurrentContext = false;
     showEndOfLine = true;
   };
   extraConfigLua = ''
