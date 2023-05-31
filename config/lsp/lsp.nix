@@ -15,9 +15,6 @@
       enable = true;
       cmp.enable = true;
     };
-    lspsaga = {
-      enable = true;
-    };
     rust-tools = {
       enable = true;
     };
