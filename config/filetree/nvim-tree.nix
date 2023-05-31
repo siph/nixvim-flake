@@ -9,5 +9,10 @@
       ignore = false;
     };
   };
-  maps.normal."<C-n>".action = ":NvimTreeToggle<CR>";
+  maps.normal = {
+    "<C-n>" = {
+      desc = "Toggle Tree";
+      action = "<cmd>lua require('nvim-tree.api').tree.toggle()<CR>";
+    };
+  };
 }
