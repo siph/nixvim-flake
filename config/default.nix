@@ -9,6 +9,8 @@
     ./indent-blankline.nix
     ./lsp.nix
     ./lualine.nix
+    ./noice.nix
+    ./notify.nix
     ./nvim-cmp.nix
     ./nvim-tree.nix
     ./telescope.nix
