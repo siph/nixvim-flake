@@ -3,6 +3,8 @@
     enable = true;
     char = "";
     useTreesitter = true;
+    showCurrentContext = true;
+    showEndOfLine = true;
   };
   extraConfigLua = ''
     vim.wo.colorcolumn = "99999"
