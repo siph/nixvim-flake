@@ -25,6 +25,13 @@
       };
     };
   };
+  clipboard = {
+    register = "unnamedplus";
+    providers = {
+      xsel.enable = true;
+      wl-copy.enable = true;
+    };
+  };
   extraConfigVim = ''
       set tabstop=4
       set shiftwidth=4
@@ -40,9 +47,7 @@
       set noerrorbells
       set novisualbell
       set relativenumber
-      set clipboard+=unnamedplus
       set nowrap
-      set nohlsearch
       set incsearch
 
       " Highlight on yank
