@@ -4,7 +4,7 @@
     rightMouseCommand = "vertical sbuffer %d";
     numbers = "both";
     diagnostics = "nvim_lsp";
-    separatorStyle = "thick";
+    separatorStyle = "slope";
     offsets = [{
       filetype = "NvimTree";
       text = "File Explorer";
