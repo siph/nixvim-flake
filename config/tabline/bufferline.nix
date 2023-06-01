@@ -58,10 +58,10 @@
   };
   maps = {
     normal."<A-l>" = {
-      action = ":BufferLineCycleNext<CR>";
+      action = "<Cmd>BufferLineCycleNext<CR>";
     };
     normal."<A-h>" = {
-      action = ":BufferLineCyclePrev<CR>";
+      action = "<Cmd>BufferLineCyclePrev<CR>";
     };
   };
 }
