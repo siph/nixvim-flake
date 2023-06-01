@@ -15,6 +15,7 @@
       enable = true;
       cmp.enable = true;
     };
+    crates-nvim.enable = true;
     rust-tools = {
       enable = true;
     };
