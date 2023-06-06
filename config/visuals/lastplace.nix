@@ -1,0 +1,5 @@
+{
+  plugins.lastplace = {
+    enable = true;
+  };
+}
