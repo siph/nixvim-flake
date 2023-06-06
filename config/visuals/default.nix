@@ -1,5 +1,6 @@
 {
   imports = [
+    ./alpha.nix
     ./gitsigns.nix
     ./gruvbox.nix
     ./indent-blankline.nix
