@@ -8,6 +8,7 @@
     ./lastplace.nix
     ./noice.nix
     ./notify.nix
+    ./undotree.nix
     ./which-key.nix
   ];
 }
