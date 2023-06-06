@@ -24,6 +24,11 @@
         desc = "Lsp Show Description";
         action = "<cmd>lua require('lspsaga.provider').preview_definition()<CR>";
       };
+      "<leader>ly" = {
+        silent = true;
+        desc = "Lsp Copy Diagnostics";
+        action = "<cmd>Lspsaga yank_line_diagnostics<CR>";
+      };
     };
   };
 }
