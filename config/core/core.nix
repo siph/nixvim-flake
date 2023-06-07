@@ -50,7 +50,6 @@
       set novisualbell
       set relativenumber
       set number
-      set nowrap
       set incsearch
 
       " Highlight on yank
