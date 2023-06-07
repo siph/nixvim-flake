@@ -8,7 +8,7 @@
       }
       {
         opts = {
-          hl = "Type";
+          hl = "Identifier";
           position = "center";
         };
         type = "text";
@@ -60,7 +60,7 @@
       }
       {
         opts = {
-          hl = "Keyword";
+          hl = "Constant";
           position = "center";
         };
         type = "text";
