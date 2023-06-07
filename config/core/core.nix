@@ -49,6 +49,7 @@
       set noerrorbells
       set novisualbell
       set relativenumber
+      set number
       set nowrap
       set incsearch
 
