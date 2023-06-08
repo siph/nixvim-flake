@@ -8,6 +8,8 @@
         nil_ls.enable = true;
         rust-analyzer.enable = true;
         yamlls.enable = true;
+        java-language-server.enable = true;
+        kotlin-language-server.enable = true;
       };
     };
     lsp-lines.enable = true;
