@@ -20,6 +20,10 @@
         desc = "Find Help";
         action = "<cmd>lua require('telescope.builtin').help_tags()<CR>";
       };
+      "<leader>fd" = {
+        desc = "Find Diagnostics";
+        action = "<cmd>lua require('telescope.builtin').diagnostics()<CR>";
+      };
       "<leader>ft" = {
         desc = "Find Treesitter";
         action = "<cmd>lua require('telescope.builtin').treesitter()<CR>";
