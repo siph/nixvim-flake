@@ -4,7 +4,7 @@
   };
   maps = {
     normal = {
-      "<leader>bd" = {
+      "<leader>b" = {
         desc = "Close Buffer";
         action = "<cmd>Bdelete<CR>";
       };
