@@ -1,16 +1,23 @@
 {
   plugins.telescope = {
     enable = true;
+    defaults = {
+        file_ignore_patterns = [
+          "^.git/"
+          "^output/"
+          "^target/"
+        ];
+    };
   };
   maps = {
     normal = {
       "<leader>ff" = {
         desc = "Find Files";
-        action = "<cmd>lua require('telescope.builtin').find_files()<CR>";
+        action = "<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>";
       };
       "<leader>fg" = {
         desc = "Grep Files";
-        action = "<cmd>lua require('telescope.builtin').live_grep()<CR>";
+        action = "<cmd>lua require('telescope.builtin').live_grep({hidden = true})<CR>";
       };
       "<leader>fb" = {
         desc = "Find Buffer";
