@@ -4,11 +4,11 @@
     nvim-cmp = {
       enable = true;
       sources = [
-        { name = "buffer"; }
-        { name = "luasnip"; }
-        { name = "nvim_lsp"; }
         { name = "path"; }
+        { name = "nvim_lsp"; }
+        { name = "luasnip"; }
         { name = "treesitter"; }
+        { name = "buffer"; }
       ];
       mapping = {
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
