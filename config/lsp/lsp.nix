@@ -8,7 +8,6 @@
         nil_ls.enable = true;
         rust-analyzer.enable = true;
         yamlls.enable = true;
-        java-language-server.enable = true;
         kotlin-language-server.enable = true;
       };
     };
@@ -20,6 +19,11 @@
     crates-nvim.enable = true;
     rust-tools = {
       enable = true;
+    };
+    nvim-jdtls = {
+      enable = true;
+      # sneak into `.idea` project folder
+      data = ".idea/nvim-jdtls";
     };
   };
   maps = {
