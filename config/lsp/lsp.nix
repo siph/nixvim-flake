@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins = {
     lsp = {
@@ -16,7 +17,6 @@
       enable = true;
       cmp.enable = true;
     };
-    crates-nvim.enable = true;
     rust-tools = {
       enable = true;
     };
@@ -34,4 +34,10 @@
       };
     };
   };
+  extraPlugins = with pkgs.vimPlugins; [
+    crates-nvim
+  ];
+  extraConfigLua = ''
+    require('crates').setup({})
+  '';
 }
