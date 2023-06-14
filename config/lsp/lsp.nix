@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   plugins = {
     lsp = {
@@ -34,10 +33,4 @@
       };
     };
   };
-  extraPlugins = with pkgs.vimPlugins; [
-    crates-nvim
-  ];
-  extraConfigLua = ''
-    require('crates').setup({})
-  '';
 }
