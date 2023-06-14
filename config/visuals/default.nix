@@ -2,6 +2,7 @@
   imports = [
     ./alpha.nix
     ./bbye.nix
+    ./cursorline.nix
     ./gitsigns.nix
     ./gruvbox.nix
     ./indent-blankline.nix
