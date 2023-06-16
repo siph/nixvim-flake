@@ -11,7 +11,6 @@
         kotlin-language-server.enable = true;
       };
     };
-    lsp-lines.enable = true;
     lspkind = {
       enable = true;
       cmp.enable = true;
@@ -25,13 +24,5 @@
       data = ".idea/nvim-jdtls";
     };
     null-ls.enable = true;
-  };
-  maps = {
-    normal = {
-      "<leader>ll" = {
-        desc = "Toggle Lines";
-        action = "<cmd>lua require('lsp_lines').toggle()<CR>";
-      };
-    };
   };
 }
