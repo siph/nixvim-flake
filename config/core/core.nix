@@ -42,12 +42,14 @@
         autoindent = true;
         expandtab = true;
         hidden = true;
+        ignorecase = true;
         incsearch = true;
         number = true;
         relativenumber = true;
         scrolloff = 15;
         shiftwidth = 4;
         signcolumn = "yes";
+        smartcase = true;
         softtabstop = 4;
         spell = true;
         splitbelow = true;
