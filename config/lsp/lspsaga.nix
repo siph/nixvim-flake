@@ -4,6 +4,11 @@
   };
   maps = {
     normal = {
+      "<leader>la" = {
+        silent = true;
+        desc = "Lsp Code Actions";
+        action = "<cmd>Lspsaga code_action<CR>";
+      };
       "<leader>lf" = {
         silent = true;
         desc = "Lsp Find";
