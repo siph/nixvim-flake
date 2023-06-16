@@ -1,10 +1,4 @@
 {
-  colorschemes.gruvbox = {
-    enable = true;
-    contrastDark = "hard";
-    trueColor = true;
-  };
-
   highlight = {
     Normal = {
       bg = "none";
@@ -17,7 +11,6 @@
     };
   };
 
-  # Background transparency until I can figure why bufferline isn't fully transparent.
   extraConfigVim = ''
       augroup user_colors
         autocmd!

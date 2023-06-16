@@ -4,11 +4,11 @@
     ./bbye.nix
     ./cursorline.nix
     ./gitsigns.nix
-    ./gruvbox.nix
     ./indent-blankline.nix
     ./lastplace.nix
     ./noice.nix
     ./notify.nix
+    ./theme
     ./undotree.nix
     ./which-key.nix
   ];
