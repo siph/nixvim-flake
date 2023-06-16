@@ -24,6 +24,7 @@
       # sneak into `.idea` project folder
       data = ".idea/nvim-jdtls";
     };
+    null-ls.enable = true;
   };
   maps = {
     normal = {
