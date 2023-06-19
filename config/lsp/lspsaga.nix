@@ -1,6 +1,7 @@
 {
   plugins.lspsaga = {
     enable = true;
+    icons.codeAction = "💡";
   };
   maps = {
     normal = {
