@@ -65,12 +65,5 @@
         command = "setlocal tabstop=2 shiftwidth=2 softtabstop=2";
       }
     ];
-    extraConfigVim = ''
-        " Highlight on yank
-        augroup highlight_yank
-            autocmd!
-            au TextYankPost * silent! lua vim.highlight.on_yank{higroup="Search", timeout=200}
-        augroup END
-    '';
   };
 }

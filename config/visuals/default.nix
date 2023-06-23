@@ -4,6 +4,7 @@
     ./bbye.nix
     ./cursorline.nix
     ./gitsigns.nix
+    ./highlight-yank.nix
     ./indent-blankline.nix
     ./lastplace.nix
     ./noice.nix
