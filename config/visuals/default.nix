@@ -2,9 +2,9 @@
   imports = [
     ./alpha.nix
     ./bbye.nix
-    ./cursorline.nix
     ./gitsigns.nix
     ./highlight-yank.nix
+    ./illuminate.nix
     ./indent-blankline.nix
     ./lastplace.nix
     ./noice.nix
