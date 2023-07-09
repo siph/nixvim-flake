@@ -2,11 +2,11 @@
   plugins.telescope = {
     enable = true;
     defaults = {
-        file_ignore_patterns = [
-          "^.git/"
-          "^output/"
-          "^target/"
-        ];
+      file_ignore_patterns = [
+        "^.git/"
+        "^output/"
+        "^target/"
+      ];
     };
   };
   maps = {

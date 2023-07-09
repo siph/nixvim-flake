@@ -5,11 +5,13 @@
     numbers = "both";
     diagnostics = "nvim_lsp";
     separatorStyle = "slope";
-    offsets = [{
-      filetype = "NvimTree";
-      text = "File Explorer";
-      text_align = "left";
-    }];
+    offsets = [
+      {
+        filetype = "NvimTree";
+        text = "File Explorer";
+        text_align = "left";
+      }
+    ];
     highlights = {
       background.bg = "none";
       bufferSelected.bg = "none";

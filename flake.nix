@@ -14,9 +14,13 @@
     };
   };
 
-  outputs = { nixpkgs, nixvim, flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-
+  outputs = {
+    nixpkgs,
+    nixvim,
+    flake-parts,
+    ...
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
       systems = [
         "aarch64-linux"
         "x86_64-linux"
@@ -24,8 +28,12 @@
         "x86_64-darwin"
       ];
 
-      perSystem = { system, pkgs, ... }:
-      let
+      perSystem = {
+        system,
+        pkgs,
+        self',
+        ...
+      }: let
         config = import ./config;
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
@@ -34,7 +42,6 @@
           module = config;
         };
       in {
-
         checks = {
           default = nixvimLib.check.mkTestDerivationFromNvim {
             inherit nvim;
@@ -54,9 +61,10 @@
         packages.default = nvim;
 
         devShells = {
-          default = with pkgs; mkShell {
-            inherit (self'.checks.pre-commit-check) shellHook;
-          };
+          default = with pkgs;
+            mkShell {
+              inherit (self'.checks.pre-commit-check) shellHook;
+            };
         };
       };
     };

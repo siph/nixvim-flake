@@ -39,24 +39,24 @@
       };
     };
     options = {
-        autoindent = true;
-        expandtab = true;
-        hidden = true;
-        ignorecase = true;
-        incsearch = true;
-        number = true;
-        relativenumber = true;
-        scrolloff = 15;
-        shiftwidth = 4;
-        signcolumn = "yes";
-        smartcase = true;
-        softtabstop = 4;
-        spell = true;
-        splitbelow = true;
-        splitright = true;
-        tabstop = 4;
-        termguicolors = true;
-        updatetime = 100;
+      autoindent = true;
+      expandtab = true;
+      hidden = true;
+      ignorecase = true;
+      incsearch = true;
+      number = true;
+      relativenumber = true;
+      scrolloff = 15;
+      shiftwidth = 4;
+      signcolumn = "yes";
+      smartcase = true;
+      softtabstop = 4;
+      spell = true;
+      splitbelow = true;
+      splitright = true;
+      tabstop = 4;
+      termguicolors = true;
+      updatetime = 100;
     };
     autoCmd = [
       {

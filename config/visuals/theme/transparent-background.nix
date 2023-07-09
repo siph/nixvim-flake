@@ -12,9 +12,9 @@
   };
 
   extraConfigVim = ''
-      augroup user_colors
-        autocmd!
-        autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
-      augroup END
+    augroup user_colors
+      autocmd!
+      autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+    augroup END
   '';
 }

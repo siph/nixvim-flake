@@ -1,15 +1,14 @@
-
 {
   plugins = {
     nvim-cmp = {
       enable = true;
       sources = [
-        { name = "path"; }
-        { name = "nvim_lsp"; }
-        { name = "luasnip"; }
-        { name = "treesitter"; }
-        { name = "crates"; }
-        { name = "buffer"; }
+        {name = "path";}
+        {name = "nvim_lsp";}
+        {name = "luasnip";}
+        {name = "treesitter";}
+        {name = "crates";}
+        {name = "buffer";}
       ];
       mapping = {
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
