@@ -1,44 +1,44 @@
 {
-  description = "A nixvim configuration";
+  description = "Chris' NeoVim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     nixvim = {
       url = "github:pta2002/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {
-    nixpkgs,
-    nixvim,
-    flake-utils,
-    ...
-  }:
-  let
-    config = import ./config; # import the module directly
-  in
-    flake-utils.lib.eachDefaultSystem (system: let
-      nixvimLib = nixvim.lib.${system};
-      pkgs = import nixpkgs {inherit system;};
-      nixvim' = nixvim.legacyPackages.${system};
-      nvim = nixvim'.makeNixvimWithModule {
-        inherit pkgs;
-        module = config;
-      };
-    in {
-      checks = {
-        # Run `nix flake check .` to verify that your config is not broken
-        default = nixvimLib.check.mkTestDerivationFromNvim {
-          inherit nvim;
-          name = "A nixvim configuration";
-        };
-      };
+  outputs = { nixpkgs, nixvim, flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
 
-      packages = {
-        # Lets you run `nix run .` to start nixvim
-        default = nvim;
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+
+      perSystem = { system, pkgs, ... }:
+      let
+        config = import ./config;
+        nixvimLib = nixvim.lib.${system};
+        nixvim' = nixvim.legacyPackages.${system};
+        nvim = nixvim'.makeNixvimWithModule {
+          inherit pkgs;
+          module = config;
+        };
+      in {
+
+        checks = {
+          default = nixvimLib.check.mkTestDerivationFromNvim {
+            inherit nvim;
+            name = "A nixvim configuration";
+          };
+        };
+
+        packages.default = nvim;
       };
-    });
+    };
 }
