@@ -8,6 +8,10 @@
       url = "github:pta2002/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, nixvim, flake-parts, ... }@inputs:
@@ -36,9 +40,24 @@
             inherit nvim;
             name = "A nixvim configuration";
           };
+          pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+            src = ./.;
+            hooks = {
+              statix.enable = true;
+              alejandra.enable = true;
+            };
+          };
         };
 
+        formatter = pkgs.alejandra;
+
         packages.default = nvim;
+
+        devShells = {
+          default = with pkgs; mkShell {
+            inherit (self'.checks.pre-commit-check) shellHook;
+          };
+        };
       };
     };
 }
