@@ -8,6 +8,7 @@
       enable = true;
       ignore = false;
     };
+    updateFocusedFile.enable = true;
   };
   maps.normal = {
     "<C-n>" = {
