@@ -5,7 +5,6 @@
       servers = {
         lua-ls.enable = true;
         nil_ls.enable = true;
-        rust-analyzer.enable = true;
         yamlls.enable = true;
         kotlin-language-server.enable = true;
       };
