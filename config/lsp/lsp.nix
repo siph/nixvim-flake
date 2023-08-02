@@ -15,6 +15,7 @@
     };
     rust-tools = {
       enable = true;
+      server.check.command = "clippy";
     };
     nvim-jdtls = {
       enable = true;
