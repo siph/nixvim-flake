@@ -1,7 +1,12 @@
 {
   plugins.lspsaga = {
     enable = true;
-    icons.codeAction = "💡";
+    lightbulb = {
+      enable = true;
+      virtualText = false;
+    };
+    symbolInWinbar.enable = false;
+    ui.border = "rounded";
   };
   maps = {
     normal = {
@@ -13,27 +18,27 @@
       "<leader>lf" = {
         silent = true;
         desc = "Lsp Find";
-        action = "<cmd>lua require('lspsaga.provider').lsp_finder()<CR>";
+        action = "<cmd>Lspsaga finder<CR>";
       };
       "<leader>lh" = {
         silent = true;
         desc = "Lsp Hover";
-        action = "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>";
+        action = "<cmd>Lspsaga hover_doc<CR>";
       };
       "<leader>lr" = {
         silent = true;
         desc = "Lsp Rename";
-        action = "<cmd>lua require('lspsaga.rename').rename()<CR>";
+        action = "<cmd>Lspsaga rename<CR>";
+      };
+      "<leader>lp" = {
+        silent = true;
+        desc = "Lsp Show Definition";
+        action = "<cmd>Lspsaga peek_definition<CR>";
       };
       "<leader>ld" = {
         silent = true;
-        desc = "Lsp Show Description";
-        action = "<cmd>lua require('lspsaga.provider').preview_definition()<CR>";
-      };
-      "<leader>ly" = {
-        silent = true;
-        desc = "Lsp Copy Diagnostics";
-        action = "<cmd>Lspsaga yank_line_diagnostics<CR>";
+        desc = "Lsp Goto Definition";
+        action = "<cmd>Lspsaga goto_definition<CR>";
       };
     };
   };
