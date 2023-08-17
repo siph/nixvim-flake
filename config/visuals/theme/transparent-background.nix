@@ -9,6 +9,21 @@
     NormalNC = {
       bg = "none";
     };
+    WinSeparator = {
+      bg = "none";
+    };
+    WinBar = {
+      bg = "none";
+    };
+    SignColumn = {
+      bg = "none";
+    };
+    StatusLine = {
+      bg = "none";
+    };
+    Pmenu = {
+      bg = "none";
+    };
   };
 
   extraConfigVim = ''
