@@ -1,15 +1,16 @@
 {
   plugins.nvim-tree = {
     enable = true;
-    diagnostics = {
-      enable = true;
-    };
     git = {
       enable = true;
       ignore = false;
     };
+    renderer.indentWidth = 1;
+    diagnostics.enable = true;
+    view.float.enable = true;
     updateFocusedFile.enable = true;
   };
+
   maps.normal = {
     "<C-n>" = {
       desc = "Toggle Tree";
