@@ -34,12 +34,15 @@
         self',
         ...
       }: let
-        config = import ./config;
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
-          module = config;
+          module = ./config/full.nix;
+        };
+        nvim-lite = nixvim'.makeNixvimWithModule {
+          inherit pkgs;
+          module = ./config/lite.nix;
         };
       in {
         checks = {
@@ -58,7 +61,11 @@
 
         formatter = pkgs.alejandra;
 
-        packages.default = nvim;
+        packages = rec {
+          default = full;
+          full = nvim;
+          lite = nvim-lite;
+        };
 
         devShells = {
           default = with pkgs;
