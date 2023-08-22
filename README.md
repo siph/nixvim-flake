@@ -7,8 +7,12 @@ complete with lsp, treesitter, and more.
 ## How to Run
 
 You can run this directly from the command line with:
-```nix
+```shell
+# Full featured version
 nix run github:siph/nixvim-flake
+
+# Lighter version without lsp, tabs, filetree, etc.
+nix run github:siph/nixvim-flake#lite
 ```
 
 You can also plug this into a flake to include it into a system configuration.
