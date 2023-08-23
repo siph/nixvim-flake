@@ -12,7 +12,6 @@
     };
     lspkind = {
       enable = true;
-      cmp.enable = true;
     };
     rust-tools = {
       enable = true;
