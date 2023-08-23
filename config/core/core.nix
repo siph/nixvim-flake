@@ -40,6 +40,8 @@
       hidden = true;
       ignorecase = true;
       incsearch = true;
+      list = true;
+      listchars = "tab:>-,trail:●,nbsp:+";
       number = true;
       relativenumber = true;
       scrolloff = 15;
