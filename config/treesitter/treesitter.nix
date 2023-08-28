@@ -7,6 +7,5 @@
     };
     treesitter-context.enable = true;
     treesitter-rainbow.enable = true;
-    treesitter-playground.enable = true;
   };
 }
