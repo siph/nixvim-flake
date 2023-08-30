@@ -24,6 +24,9 @@
     Pmenu = {
       bg = "none";
     };
+    CursorLine = {
+      bg = "none";
+    };
   };
 
   extraConfigVim = ''
