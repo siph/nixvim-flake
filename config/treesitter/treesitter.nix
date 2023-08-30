@@ -6,6 +6,5 @@
       nixvimInjections = true;
     };
     treesitter-context.enable = true;
-    treesitter-rainbow.enable = true;
   };
 }

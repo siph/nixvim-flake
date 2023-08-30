@@ -10,6 +10,7 @@
     ./lastplace.nix
     ./noice.nix
     ./notify.nix
+    ./rainbow-delimiters.nix
     ./theme
     ./undotree.nix
     ./which-key.nix
