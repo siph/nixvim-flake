@@ -1,21 +1,19 @@
-{pkgs, ...}: let
-  tree-sitter-nu = pkgs.callPackage ./grammars/nushell.nix {inherit (pkgs.tree-sitter) buildGrammar;};
-in {
+{pkgs, ...}: {
   plugins = {
     treesitter = {
       enable = true;
       indent = false;
       nixvimInjections = true;
 
-      grammarPackages =
-        pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars
-        ++ [tree-sitter-nu];
       languageRegister.nu = "nu";
+      grammarPackages = with pkgs;
+        vimPlugins.nvim-treesitter.passthru.allGrammars
+        ++ [tree-sitter-grammars.tree-sitter-nu];
     };
     treesitter-context.enable = true;
   };
 
-  extraFiles = {
+  extraFiles = with pkgs.tree-sitter-grammars; {
     "/queries/nu/highlights.scm" = builtins.readFile "${tree-sitter-nu}/queries/highlights.scm";
     "/queries/nu/injections.scm" = builtins.readFile "${tree-sitter-nu}/queries/injections.scm";
   };
