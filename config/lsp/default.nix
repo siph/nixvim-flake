@@ -4,7 +4,8 @@
     ./lsp.nix
     ./lspsaga.nix
     ./luasnip.nix
-    ./nushell.nix
+    # This is conflicting (scm files) with `tree-sitter-nu`
+    # ./nushell.nix
     ./nvim-cmp.nix
   ];
 }
