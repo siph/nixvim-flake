@@ -6,6 +6,7 @@
       inherit (final.tree-sitter) buildGrammar;
       inherit inputs;
     };
+    nixvimLib = inputs.nixvim.lib.${prev.system};
   };
 in
   inputs.nixpkgs.lib.composeManyExtensions [additions modifications]
