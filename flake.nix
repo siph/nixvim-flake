@@ -49,6 +49,15 @@
           module = ./config/lite.nix;
         };
       in {
+        _module.args.pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = builtins.attrValues {
+            default = import ./overlay {
+              inherit inputs;
+            };
+          };
+        };
+
         checks = {
           default = nixvimLib.check.mkTestDerivationFromNvim {
             inherit nvim;

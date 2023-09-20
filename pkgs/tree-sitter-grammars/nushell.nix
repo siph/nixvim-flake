@@ -1,10 +1,12 @@
 {
   inputs,
   buildGrammar,
-}:
-buildGrammar {
-  language = "nu";
-  # Is there a way to get the revision? Like `inputs.tree-sitter-nu.rev`?
-  version = "0.0.0+???????";
-  src = inputs.tree-sitter-nu;
-}
+}: let
+  inherit ((builtins.fromJSON (builtins.readFile ../../flake.lock)).nodes.tree-sitter-nu.locked) rev;
+  version = "0.0.0+${rev}";
+in
+  buildGrammar {
+    inherit version;
+    language = "nu";
+    src = inputs.tree-sitter-nu;
+  }

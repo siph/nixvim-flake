@@ -1,12 +1,11 @@
-{
-  inputs,
-  system,
-  ...
-}: let
+{inputs, ...}: let
   additions = final: _prev: import ../pkgs {pkgs = final;};
 
   modifications = final: prev: {
-    tree-sitter-grammars.tree-sitter-nu = inputs.nixpkgs.${system}.callPackage ../pkgs/tree-sitter-grammars/nushell.nix;
+    tree-sitter-grammars.tree-sitter-nu = final.callPackage ../pkgs/tree-sitter-grammars/nushell.nix {
+      inherit (final.tree-sitter) buildGrammar;
+      inherit inputs;
+    };
   };
 in
   inputs.nixpkgs.lib.composeManyExtensions [additions modifications]
