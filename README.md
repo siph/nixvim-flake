@@ -11,7 +11,7 @@ You can run this directly from the command line with:
 # Full featured version
 nix run github:siph/nixvim-flake
 
-# Lighter version without lsp, tabs, filetree, etc.
+# Lighter version without lsp.
 nix run github:siph/nixvim-flake#lite
 ```
 
