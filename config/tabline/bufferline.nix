@@ -5,12 +5,18 @@
     diagnostics = "nvim_lsp";
     separatorStyle = "slope";
   };
-  maps = {
-    normal."<A-l>" = {
+  keymaps = [
+    {
+      mode = "n";
+      key = "<A-l>";
       action = "<Cmd>BufferLineCycleNext<CR>";
-    };
-    normal."<A-h>" = {
+      options.desc = "Next Buffer";
+    }
+    {
+      mode = "n";
+      key = "<A-h>";
       action = "<Cmd>BufferLineCyclePrev<CR>";
-    };
-  };
+      options.desc = "Previous Buffer";
+    }
+  ];
 }

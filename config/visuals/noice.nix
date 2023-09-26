@@ -13,14 +13,19 @@
       };
     };
   };
-  maps.normal = {
-    "<leader>c" = {
-      desc = "Clear Messages";
-      action = "<cmd>lua require('noice').cmd('dismiss')<CR>";
-    };
-    "<leader>fm" = {
-      desc = "Find Messages";
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>fm";
       action = "<cmd>lua require('noice').cmd('telescope')<CR>";
-    };
-  };
+      options.desc = "Find Messages";
+    }
+    {
+      mode = "n";
+      key = "<leader>c";
+      action = "<cmd>lua require('noice').cmd('dismiss')<CR>";
+      options.desc = "Clear Messages";
+    }
+  ];
 }

@@ -6,31 +6,41 @@
       loaded_perl_provider = 0;
       loaded_python_provider = 0;
     };
-    maps = {
-      normal = {
-        "<leader>q" = {
-          desc = "Quit NeoVim";
-          action = "<cmd>qa<CR>";
-        };
-        "<leader>w" = {
-          desc = "Save Current Buffer";
-          action = "<cmd>w<CR>";
-        };
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>q";
+        action = "<cmd>qa<CR>";
+        options.desc = "Quit NeoVim";
+      }
+      {
+        mode = "n";
+        key = "<leader>w";
+        action = "<cmd>w<CR>";
+        options.desc = "Save Current Buffer";
+      }
 
-        "<C-h>" = {
-          action = "<C-w>h";
-        };
-        "<C-j>" = {
-          action = "<C-w>j";
-        };
-        "<C-k>" = {
-          action = "<C-w>k";
-        };
-        "<C-l>" = {
-          action = "<C-w>l";
-        };
-      };
-    };
+      {
+        mode = "n";
+        key = "<C-h>";
+        action = "<C-w>h";
+      }
+      {
+        mode = "n";
+        key = "<C-j>";
+        action = "<C-w>j";
+      }
+      {
+        mode = "n";
+        key = "<C-k>";
+        action = "<C-w>k";
+      }
+      {
+        mode = "n";
+        key = "<C-l>";
+        action = "<C-w>l";
+      }
+    ];
     clipboard = {
       register = "unnamedplus";
     };

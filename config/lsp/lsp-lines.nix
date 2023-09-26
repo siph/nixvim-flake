@@ -1,13 +1,13 @@
 {
   plugins.lsp-lines.enable = true;
-  maps = {
-    normal = {
-      "<leader>ll" = {
-        desc = "Toggle Lines";
-        action = "<cmd>lua require('lsp_lines').toggle()<CR>";
-      };
-    };
-  };
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>ll";
+      action = "<cmd>lua require('lsp_lines').toggle()<CR>";
+      options.desc = "Toggle Lines";
+    }
+  ];
   autoCmd = [
     {
       event = "VimEnter";

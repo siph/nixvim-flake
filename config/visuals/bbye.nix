@@ -2,12 +2,13 @@
   plugins.vim-bbye = {
     enable = true;
   };
-  maps = {
-    normal = {
-      "<leader>b" = {
-        desc = "Close Buffer";
-        action = "<cmd>Bdelete<CR>";
-      };
-    };
-  };
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>b";
+      action = "<cmd>Bdelete<CR>";
+      options.desc = "Close Buffer";
+    }
+  ];
 }

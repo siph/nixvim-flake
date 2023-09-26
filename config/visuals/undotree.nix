@@ -2,12 +2,12 @@
   plugins.undotree = {
     enable = true;
   };
-  maps = {
-    normal = {
-      "<leader>u" = {
-        desc = "Toggle Undotree";
-        action = "<cmd>UndotreeToggle<CR>";
-      };
-    };
-  };
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>u";
+      action = "<cmd>UndotreeToggle<CR>";
+      options.desc = "Toggle Undotree";
+    }
+  ];
 }
