@@ -27,4 +27,14 @@
       snippet.expand = "luasnip";
     };
   };
+
+  # I keep accidentally pressing `q` which prevents `cmp` from working because
+  # of the macro recording. I don't use this anyway.
+  maps = {
+    normal = {
+      "q" = {
+        action = "<Nop>";
+      };
+    };
+  };
 }
