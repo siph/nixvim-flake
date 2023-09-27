@@ -38,7 +38,6 @@
         self',
         ...
       }: let
-        nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
@@ -59,7 +58,7 @@
         };
 
         checks = {
-          default = nixvimLib.check.mkTestDerivationFromNvim {
+          default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
             inherit nvim;
             name = "A nixvim configuration";
           };
