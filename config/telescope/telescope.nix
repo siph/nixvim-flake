@@ -52,5 +52,11 @@
       action = "<cmd>lua require('telescope.builtin').treesitter()<CR>";
       options.desc = "Find Treesitter";
     }
+    {
+      mode = "n";
+      key = "<leader>fm";
+      action = "<cmd>lua require('telescope.builtin').marks()<CR>";
+      options.desc = "Find Marks";
+    }
   ];
 }
