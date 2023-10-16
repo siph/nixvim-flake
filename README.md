@@ -1,5 +1,6 @@
-Neovim configuration build using [nixvim](https://github.com/pta2002/nixvim)
-complete with lsp, treesitter, and more.
+Neovim configuration build using
+[nixvim](https://github.com/nix-community/nixvim) complete with lsp,
+treesitter, and more.
 
 ## Screenshot
 ![screenshot](./doc/ss_1.png)
@@ -28,9 +29,9 @@ This input can then be used as an overlay to replace the default neovim.
 ```nix
 {
     overlays = (final: prev: {
-      neovim = inputs.chris-neovim.packages.${system}.default;
+      neovim = inputs.chris-neovim.packages.${prev.system}.default;
     });
 }
 ```
-Check my [system configuration](https://github.com/siph/nix-dotfiles) for more
-information on this method.
+You can find more information on building your own flake
+[here](https://gist.github.com/siph/288b7c6b5f68a1902d28aebc95fde4c5).
