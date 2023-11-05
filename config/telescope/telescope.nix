@@ -30,12 +30,6 @@
     }
     {
       mode = "n";
-      key = "<leader>fb";
-      action = "<cmd>lua require('telescope.builtin').buffers()<CR>";
-      options.desc = "Find Buffer";
-    }
-    {
-      mode = "n";
       key = "<leader>fh";
       action = "<cmd>lua require('telescope.builtin').help_tags()<CR>";
       options.desc = "Find Help";
