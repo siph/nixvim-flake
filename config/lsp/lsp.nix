@@ -3,11 +3,12 @@
     lsp = {
       enable = true;
       servers = {
+        gdscript.enable = true;
+        kotlin-language-server.enable = true;
         lua-ls.enable = true;
         nil_ls.enable = true;
-        yamlls.enable = true;
         pylsp.enable = true;
-        kotlin-language-server.enable = true;
+        yamlls.enable = true;
       };
     };
     lspkind = {
