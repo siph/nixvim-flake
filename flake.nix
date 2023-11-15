@@ -22,6 +22,8 @@
     nixpkgs,
     nixvim,
     flake-parts,
+    tree-sitter-nu,
+    pre-commit-hooks,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -36,6 +38,7 @@
         system,
         pkgs,
         self',
+        lib,
         ...
       }: let
         nixvim' = nixvim.legacyPackages.${system};
@@ -48,11 +51,11 @@
           module = ./config/lite.nix;
         };
       in {
-        _module.args.pkgs = import inputs.nixpkgs {
+        _module.args.pkgs = import nixpkgs {
           inherit system;
           overlays = builtins.attrValues {
             default = import ./overlay {
-              inherit inputs;
+              inherit nixvim tree-sitter-nu lib system;
             };
           };
         };
@@ -62,7 +65,7 @@
             inherit nvim;
             name = "A nixvim configuration";
           };
-          pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+          pre-commit-check = pre-commit-hooks.lib.${system}.run {
             src = ./.;
             hooks = {
               statix.enable = true;

@@ -27,9 +27,10 @@ You can also plug this into a flake to include it into a system configuration.
 
 This input can then be used as an overlay to replace the default neovim.
 ```nix
+{ chris-neovim, ... }:
 {
     overlays = (final: prev: {
-      neovim = inputs.chris-neovim.packages.${prev.system}.default;
+      neovim = chris-neovim.packages.${prev.system}.default;
     });
 }
 ```

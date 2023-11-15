@@ -1,5 +1,5 @@
 {
-  inputs,
+  tree-sitter-nu,
   buildGrammar,
 }: let
   inherit ((builtins.fromJSON (builtins.readFile ../../flake.lock)).nodes.tree-sitter-nu.locked) rev;
@@ -8,5 +8,5 @@ in
   buildGrammar {
     inherit version;
     language = "nu";
-    src = inputs.tree-sitter-nu;
+    src = tree-sitter-nu;
   }

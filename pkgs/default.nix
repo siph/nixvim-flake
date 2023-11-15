@@ -1,6 +1,6 @@
 {
-  pkgs,
-  inputs,
+  system,
+  nixvim,
 }: {
-  nixvimLib = inputs.nixvim.lib.${pkgs.system};
+  nixvimLib = nixvim.lib.${system};
 }
