@@ -3,7 +3,6 @@
     lsp = {
       enable = true;
       servers = {
-        gdscript.enable = true;
         kotlin-language-server.enable = true;
         lua-ls.enable = true;
         nil_ls.enable = true;
