@@ -2,6 +2,7 @@
   plugins = {
     nvim-cmp = {
       enable = true;
+
       sources = [
         {name = "path";}
         {name = "nvim_lsp";}
@@ -9,6 +10,12 @@
         {name = "crates";}
         {name = "buffer";}
       ];
+
+      # It's annoying to have to `shift+tab` up to what I want to select, these
+      # settings stop `cmp` from starting in the middle of the list.
+      completion.completeopt = "noselect";
+      preselect = "None";
+
       mapping = {
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
         "<C-f>" = "cmp.mapping.scroll_docs(4)";
@@ -24,6 +31,7 @@
           modes = ["i" "s"];
         };
       };
+
       snippet.expand = "luasnip";
     };
   };
