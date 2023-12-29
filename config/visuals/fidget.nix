@@ -1,9 +1,7 @@
 {
   plugins.fidget = {
     enable = true;
-    extraOptions = {
-      text.spinner = "meter";
-      window.blend = 0;
-    };
+    progress.display.progressIcon.pattern = "meter";
+    notification.window.winblend = 0;
   };
 }
