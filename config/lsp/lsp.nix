@@ -6,6 +6,7 @@
         kotlin-language-server.enable = true;
         lua-ls.enable = true;
         nil_ls.enable = true;
+        marksman.enable = true;
         pylsp.enable = true;
         yamlls.enable = true;
       };
