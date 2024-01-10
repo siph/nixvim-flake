@@ -14,8 +14,8 @@
   };
 
   extraFiles = with pkgs.tree-sitter-grammars; {
-    "/queries/nu/highlights.scm" = builtins.readFile "${tree-sitter-nu}/queries/highlights.scm";
-    "/queries/nu/injections.scm" = builtins.readFile "${tree-sitter-nu}/queries/injections.scm";
+    "/queries/nu/highlights.scm" = builtins.readFile "${tree-sitter-nu}/queries/nu/highlights.scm";
+    "/queries/nu/injections.scm" = builtins.readFile "${tree-sitter-nu}/queries/nu/injections.scm";
   };
 
   filetype.extension.nu = "nu";
