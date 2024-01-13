@@ -10,7 +10,6 @@
         vimPlugins.nvim-treesitter.passthru.allGrammars
         ++ [tree-sitter-grammars.tree-sitter-nu];
     };
-    treesitter-context.enable = true;
   };
 
   extraFiles = with pkgs.tree-sitter-grammars; {
