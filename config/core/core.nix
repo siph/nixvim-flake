@@ -48,6 +48,7 @@
       autoindent = true;
       expandtab = true;
       hidden = true;
+      helpheight = 9999;
       ignorecase = true;
       incsearch = true;
       list = true;
