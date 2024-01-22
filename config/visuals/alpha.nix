@@ -52,7 +52,7 @@
       }
       {
         opts = {
-          hl = "GruvboxPurple";
+          hl = "Constant";
           position = "center";
         };
         type = "text";
@@ -64,17 +64,40 @@
       }
       {
         type = "group";
-        val = [
-          {
-            command = "<CMD>Telescope find_files<CR>";
-            desc = "🔍 Find File";
-            shortcut = "f";
-          }
-          {
-            command = "<CMD>qa<CR>";
-            desc = "💣 Quit Neovim";
-            shortcut = "q";
-          }
+        val = let
+          mkButton = shortcut: cmd: val: hl: {
+            type = "button";
+            inherit val;
+            opts = {
+              inherit hl shortcut;
+              keymap = [
+                "n"
+                shortcut
+                cmd
+                {}
+              ];
+              position = "center";
+              cursor = 0;
+              width = 40;
+              align_shortcut = "right";
+              hl_shortcut = "Keyword";
+            };
+          };
+        in [
+          (
+            mkButton
+            "f"
+            "<CMD>lua require('telescope.builtin').find_files({hidden = true})<CR>"
+            "🔍 Find File"
+            "Operator"
+          )
+          (
+            mkButton
+            "q"
+            "<CMD>qa<CR>"
+            "💣 Quit Neovim"
+            "String"
+          )
         ];
       }
       {
