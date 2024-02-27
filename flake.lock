@@ -324,7 +324,8 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "pre-commit-hooks": "pre-commit-hooks_2",
-        "tree-sitter-nu": "tree-sitter-nu"
+        "tree-sitter-nu": "tree-sitter-nu",
+        "tree-sitter-surrealdb": "tree-sitter-surrealdb"
       }
     },
     "systems": {
@@ -370,6 +371,22 @@
       "original": {
         "owner": "nushell",
         "repo": "tree-sitter-nu",
+        "type": "github"
+      }
+    },
+    "tree-sitter-surrealdb": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708450003,
+        "narHash": "sha256-/xX5lEQKFuLQl6YxUA2WLKGX5P2GBugtYj42WCtA0xU=",
+        "owner": "dariuscorvus",
+        "repo": "tree-sitter-surrealdb",
+        "rev": "17a7ed4481bdaaa35a1372f3a94bc851d634a19e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dariuscorvus",
+        "repo": "tree-sitter-surrealdb",
         "type": "github"
       }
     }

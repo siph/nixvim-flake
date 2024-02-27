@@ -12,6 +12,10 @@
       url = "github:nushell/tree-sitter-nu";
       flake = false;
     };
+    tree-sitter-surrealdb = {
+      url = "github:dariuscorvus/tree-sitter-surrealdb";
+      flake = false;
+    };
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +27,7 @@
     nixvim,
     flake-parts,
     tree-sitter-nu,
+    tree-sitter-surrealdb,
     pre-commit-hooks,
     ...
   } @ inputs:
@@ -55,7 +60,7 @@
           inherit system;
           overlays = builtins.attrValues {
             default = import ./overlay {
-              inherit nixvim tree-sitter-nu lib system;
+              inherit nixvim tree-sitter-nu tree-sitter-surrealdb lib system;
             };
           };
         };
