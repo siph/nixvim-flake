@@ -1,8 +1,10 @@
 {
   colorschemes.gruvbox = {
     enable = true;
-    contrastDark = "hard";
-    trueColor = true;
+    settings = {
+      true_color = true;
+      contrast_dark = "hard";
+    };
   };
   highlight = {
     GruvboxGreenSign = {
