@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    nix-colors.url = "github:misterio77/nix-colors";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,12 +24,13 @@
   };
 
   outputs = {
+    flake-parts,
+    nix-colors,
     nixpkgs,
     nixvim,
-    flake-parts,
+    pre-commit-hooks,
     tree-sitter-nu,
     tree-sitter-surrealdb,
-    pre-commit-hooks,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -47,10 +49,12 @@
         ...
       }: let
         nixvim' = nixvim.legacyPackages.${system};
+
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
           module = ./config/full.nix;
         };
+
         nvim-lite = nixvim'.makeNixvimWithModule {
           inherit pkgs;
           module = ./config/lite.nix;
@@ -60,7 +64,7 @@
           inherit system;
           overlays = builtins.attrValues {
             default = import ./overlay {
-              inherit nixvim tree-sitter-nu tree-sitter-surrealdb lib system;
+              inherit nix-colors nixvim tree-sitter-nu tree-sitter-surrealdb lib system;
             };
           };
         };
@@ -70,6 +74,7 @@
             inherit nvim;
             name = "A nixvim configuration";
           };
+
           pre-commit-check = pre-commit-hooks.lib.${system}.run {
             src = ./.;
             hooks = {

@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   colorschemes.gruvbox = {
     enable = true;
 
@@ -8,39 +8,41 @@
     };
   };
 
-  highlight = {
-    BufferlineSeparator.fg = "#ebdbb2";
-    BufferlineTabSeparator.fg = "#ebdbb2";
-    BufferLineTabClose.fg = "#ebdbb2";
-    BufferLineSeparatorSelected.fg = "#ebdbb2";
-    BufferLineSeparatorVisible.fg = "#ebdbb2";
-    BufferLineTabSeparatorVisible.fg = "#ebdbb2";
-    BufferLineGroupLabel.fg = "#ebdbb2";
-    NvimTreeWinSeparator.fg = "#ebdbb2";
+  highlight = with pkgs.nix-colors.gruvbox-dark-hard.palette; {
+    BufferlineSeparator.fg = "#${base06}";
+    BufferlineTabSeparator.fg = "#${base06}";
+    BufferLineTabClose.fg = "#${base06}";
+    BufferLineSeparatorSelected.fg = "#${base06}";
+    BufferLineSeparatorVisible.fg = "#${base06}";
+    BufferLineTabSeparatorVisible.fg = "#${base06}";
+    BufferLineGroupLabel.fg = "#${base06}";
+    NvimTreeWinSeparator.fg = "#${base06}";
+    # This isn't working?
+    NvimTreeFolderIcon.fg = "#${base06}";
 
     GruvboxGreenSign = {
       bg = "none";
-      fg = "#b8bb26";
+      fg = "#${base0B}";
     };
 
     GruvboxRedSign = {
       bg = "none";
-      fg = "#fb4934";
+      fg = "#${base08}";
     };
 
     GruvboxBlueSign = {
       bg = "none";
-      fg = "#83a598";
+      fg = "#${base0D}";
     };
 
     GruvboxYellowSign = {
       bg = "none";
-      fg = "#fabd2f";
+      fg = "#${base0A}";
     };
 
     GruvboxAquaSign = {
       bg = "none";
-      fg = "#8ec07c";
+      fg = "#${base0C}";
     };
   };
 }

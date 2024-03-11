@@ -1,5 +1,6 @@
 {
   lib,
+  nix-colors,
   nixvim,
   tree-sitter-nu,
   tree-sitter-surrealdb,
@@ -7,7 +8,7 @@
 }: let
   additions = final: _prev:
     import ../pkgs {
-      inherit nixvim;
+      inherit nixvim nix-colors;
       inherit (final) system;
     };
 
