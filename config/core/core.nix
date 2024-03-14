@@ -1,11 +1,14 @@
-{
+{pkgs, ...}: {
   config = {
+    package = pkgs.neovim;
+
     globals = {
       mapleader = " ";
       loaded_ruby_provider = 0;
       loaded_perl_provider = 0;
       loaded_python_provider = 0;
     };
+
     keymaps = [
       {
         mode = "n";
@@ -41,9 +44,11 @@
         action = "<C-w>l";
       }
     ];
+
     clipboard = {
       register = "unnamedplus";
     };
+
     options = {
       autoindent = true;
       expandtab = true;
@@ -67,6 +72,7 @@
       termguicolors = true;
       updatetime = 100;
     };
+
     autoCmd = [
       {
         event = "FileType";
