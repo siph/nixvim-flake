@@ -4,7 +4,7 @@
       enable = true;
 
       settings = {
-        snippet.expand = "luasnip";
+        snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
 
         # It's annoying to have to `shift+tab` up to what I want to select, these
         # settings stop `cmp` from starting in the middle of the list.
