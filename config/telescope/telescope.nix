@@ -1,7 +1,7 @@
 {
   plugins.telescope = {
     enable = true;
-    defaults = {
+    settings.defaults = {
       file_ignore_patterns = [
         "^.git/"
         "^output/"

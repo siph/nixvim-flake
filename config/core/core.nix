@@ -49,7 +49,7 @@
       register = "unnamedplus";
     };
 
-    options = {
+    opts = {
       autoindent = true;
       expandtab = true;
       hidden = true;
