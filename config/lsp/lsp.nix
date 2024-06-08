@@ -7,7 +7,7 @@
         kotlin-language-server.enable = true;
         lua-ls.enable = true;
         marksman.enable = true;
-        nil_ls.enable = true;
+        nil-ls.enable = true;
         nushell.enable = true;
         pylsp.enable = true;
         yamlls.enable = true;
@@ -32,7 +32,7 @@
         # '';
       };
 
-      extraOptions = {
+      settings = {
         RustaceanToolOpts.enable_clippy = true;
       };
     };
