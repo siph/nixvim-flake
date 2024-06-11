@@ -1,6 +1,5 @@
 {
   lib,
-  neovim-nightly-overlay,
   nix-colors,
   nixvim,
   tree-sitter-nu,
@@ -14,8 +13,6 @@
     };
 
   modifications = final: prev: {
-    inherit (neovim-nightly-overlay.packages.${prev.system}) neovim;
-
     tree-sitter-grammars = {
       tree-sitter-nu = final.callPackage ../pkgs/tree-sitter-grammars/nushell.nix {
         inherit (final.tree-sitter) buildGrammar;

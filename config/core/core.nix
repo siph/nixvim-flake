@@ -1,7 +1,5 @@
-{pkgs, ...}: {
+{
   config = {
-    package = pkgs.neovim;
-
     globals = {
       mapleader = " ";
       loaded_ruby_provider = 0;

@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nix-colors.url = "github:misterio77/nix-colors";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +25,6 @@
 
   outputs = {
     flake-parts,
-    neovim-nightly-overlay,
     nix-colors,
     nixpkgs,
     nixvim,
@@ -66,7 +64,7 @@
           inherit system;
           overlays = builtins.attrValues {
             default = import ./overlay {
-              inherit neovim-nightly-overlay nix-colors nixvim tree-sitter-nu tree-sitter-surrealdb lib system;
+              inherit nix-colors nixvim tree-sitter-nu tree-sitter-surrealdb lib system;
             };
           };
         };
