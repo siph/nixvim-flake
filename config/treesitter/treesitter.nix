@@ -2,7 +2,6 @@
   plugins = {
     treesitter = {
       enable = true;
-      indent = false;
       nixvimInjections = true;
 
       languageRegister.nu = "nu";
@@ -11,14 +10,16 @@
       grammarPackages = with pkgs;
         vimPlugins.nvim-treesitter.passthru.allGrammars
         ++ (with tree-sitter-grammars; [tree-sitter-nu tree-sitter-surrealdb]);
+
+      settings.indent.enable = false;
     };
   };
 
   extraFiles = with pkgs.tree-sitter-grammars; {
-    "/queries/nu/highlights.scm" = builtins.readFile "${tree-sitter-nu}/queries/nu/highlights.scm";
-    "/queries/nu/injections.scm" = builtins.readFile "${tree-sitter-nu}/queries/nu/injections.scm";
+    "/queries/nu/highlights.scm".source = "${tree-sitter-nu}/queries/nu/highlights.scm";
+    "/queries/nu/injections.scm".source = "${tree-sitter-nu}/queries/nu/injections.scm";
 
-    "/queries/surrealdb/highlights.scm" = builtins.readFile "${tree-sitter-surrealdb}/queries/highlights.scm";
+    "/queries/surrealdb/highlights.scm".source = "${tree-sitter-surrealdb}/queries/highlights.scm";
   };
 
   filetype = {
