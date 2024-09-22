@@ -77,6 +77,16 @@
         pattern = "nix";
         command = "setlocal tabstop=2 shiftwidth=2 softtabstop=2";
       }
+      {
+        event = "FileType";
+        pattern = "nu";
+        command = "TSEnable highlight";
+      }
+      {
+        event = "FileType";
+        pattern = "surql";
+        command = "TSEnable highlight";
+      }
     ];
   };
 }
