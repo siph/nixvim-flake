@@ -21,6 +21,7 @@
 
   extraFiles = with pkgs.tree-sitter-grammars; {
     "/queries/nu/highlights.scm".source = "${tree-sitter-nu}/queries/nu/highlights.scm";
+    "/queries/nu/indents.scm".source = "${tree-sitter-nu}/queries/nu/indents.scm";
     "/queries/nu/injections.scm".source = "${tree-sitter-nu}/queries/nu/injections.scm";
 
     "/queries/surrealdb/highlights.scm".source = "${tree-sitter-surrealdb}/queries/highlights.scm";
