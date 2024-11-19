@@ -4,6 +4,7 @@
       enable = true;
 
       servers = {
+        gopls.enable = true;
         kotlin_language_server.enable = true;
         lua_ls.enable = true;
         marksman.enable = true;
