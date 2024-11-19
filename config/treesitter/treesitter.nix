@@ -11,7 +11,11 @@
         vimPlugins.nvim-treesitter.passthru.allGrammars
         ++ (with tree-sitter-grammars; [tree-sitter-nu tree-sitter-surrealdb]);
 
-      settings.indent.enable = false;
+      settings = {
+        indent.enable = true;
+        highlight.enable = true;
+        illuminate.enable = true;
+      };
     };
   };
 
