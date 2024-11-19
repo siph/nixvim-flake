@@ -4,10 +4,10 @@
       enable = true;
 
       servers = {
-        kotlin-language-server.enable = true;
-        lua-ls.enable = true;
+        kotlin_language_server.enable = true;
+        lua_ls.enable = true;
         marksman.enable = true;
-        nil-ls.enable = true;
+        nil_ls.enable = true;
         nushell.enable = true;
         pylsp.enable = true;
         yamlls.enable = true;

@@ -1,14 +1,18 @@
 {
-  plugins.telescope = {
-    enable = true;
-    settings.defaults = {
-      file_ignore_patterns = [
-        "^.git/"
-        "^output/"
-        "^target/"
-      ];
+  plugins = {
+    web-devicons.enable = true;
+    telescope = {
+      enable = true;
+      settings.defaults = {
+        file_ignore_patterns = [
+          "^.git/"
+          "^output/"
+          "^target/"
+        ];
+      };
     };
   };
+
   keymaps = [
     {
       mode = "n";
