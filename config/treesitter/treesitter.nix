@@ -12,7 +12,6 @@
         ++ (with tree-sitter-grammars; [tree-sitter-nu tree-sitter-surrealdb]);
 
       settings = {
-        indent.enable = true;
         highlight.enable = true;
         illuminate.enable = true;
       };
