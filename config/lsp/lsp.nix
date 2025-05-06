@@ -7,7 +7,7 @@
         gopls.enable = true;
         kotlin_language_server.enable = true;
         lua_ls.enable = true;
-        marksman.enable = true;
+        marksman.enable = false;
         nil_ls.enable = true;
         nushell.enable = true;
         pylsp.enable = true;
