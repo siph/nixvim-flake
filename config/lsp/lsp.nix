@@ -1,4 +1,8 @@
 {
+  lib,
+  pkgs,
+  ...
+}: {
   plugins = {
     lsp = {
       enable = true;
@@ -21,7 +25,6 @@
 
     rustaceanvim = {
       enable = true;
-      rustAnalyzerPackage = null;
 
       server = {
         # EOL inlays when?
@@ -38,12 +41,22 @@
       };
     };
 
-    nvim-jdtls = {
+    jdtls = {
       enable = true;
-      # sneak into `.idea` project folder
-      data = ".idea/nvim-jdtls";
+      settings = {
+        # sneak into `.idea` project folder
+        cmd = [
+          "${lib.getExe pkgs.jdt-language-server}"
+          "-data"
+          ".idea/nvim-jdtls"
+        ];
+      };
     };
 
     none-ls.enable = true;
+  };
+
+  dependencies = {
+    rust-analyzer.enable = false;
   };
 }
