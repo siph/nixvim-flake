@@ -1,14 +1,22 @@
 {
   plugins = {
     web-devicons.enable = true;
+
     telescope = {
       enable = true;
+
       settings.defaults = {
         file_ignore_patterns = [
           "^.git/"
           "^output/"
           "^target/"
         ];
+
+        layout_strategy = "vertical";
+
+        layout_config = {
+          preview_cutoff = 25;
+        };
       };
     };
   };
