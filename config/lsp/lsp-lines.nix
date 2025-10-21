@@ -8,10 +8,4 @@
       options.desc = "Toggle Lines";
     }
   ];
-  autoCmd = [
-    {
-      event = "VimEnter";
-      command = "lua require('lsp_lines').toggle()";
-    }
-  ];
 }
