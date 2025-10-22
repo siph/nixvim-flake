@@ -315,11 +315,11 @@
     "tree-sitter-nu": {
       "flake": false,
       "locked": {
-        "lastModified": 1752632029,
-        "narHash": "sha256-+KsRkfx0WmcfYBP7zxXqL8kPm/HsBjuI56/v910kMFU=",
+        "lastModified": 1760786516,
+        "narHash": "sha256-Zkl5V7Rcw+1HoT1U5q8wRVR17wq6qP3gHPhiLYKF7H8=",
         "owner": "nushell",
         "repo": "tree-sitter-nu",
-        "rev": "6544c4383643cf8608d50def2247a7af8314e148",
+        "rev": "4f4ac8667c1e7f80d0d9f9534845e63026210aaf",
         "type": "github"
       },
       "original": {
