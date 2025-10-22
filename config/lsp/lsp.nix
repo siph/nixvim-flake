@@ -13,7 +13,10 @@
         lua_ls.enable = true;
         marksman.enable = false;
         nil_ls.enable = true;
-        nushell.enable = true;
+        nushell = {
+          enable = true;
+          package = null;
+        };
         pylsp.enable = true;
         yamlls.enable = true;
       };
