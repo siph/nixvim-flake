@@ -29,18 +29,22 @@
     rustaceanvim = {
       enable = true;
 
-      server = {
-        # EOL inlays when?
-        # https://github.com/rust-lang/rust-analyzer/issues/4318
-        # onAttach = ''
-        #   function(client, bufnr)
-        #     vim.lsp.inlay_hint.enable(bufnt, true)
-        #   end
-        # '';
-      };
-
       settings = {
         RustaceanToolOpts.enable_clippy = true;
+        server = {
+          # EOL inlays when?
+          # https://github.com/rust-lang/rust-analyzer/issues/4318
+          # onAttach = ''
+          #   function(client, bufnr)
+          #     vim.lsp.inlay_hint.enable(bufnt, true)
+          #   end
+          # '';
+          default_settings = {
+            rust-analyzer = {
+              files.exclude = [".direnv"];
+            };
+          };
+        };
       };
     };
 
