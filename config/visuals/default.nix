@@ -2,6 +2,7 @@
   imports = [
     ./alpha.nix
     ./bbye.nix
+    ./ccc.nix
     ./fidget.nix
     ./gitsigns.nix
     ./highlight-yank.nix
