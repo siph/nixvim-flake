@@ -1,7 +1,7 @@
 {
   plugins.rainbow-delimiters = {
     enable = true;
-    highlight = [
+    settings.highlight = [
       "GruvboxRed"
       "GruvboxAqua"
       "GruvboxBlue"

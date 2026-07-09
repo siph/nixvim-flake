@@ -1,7 +1,10 @@
 {
   plugins.illuminate = {
     enable = true;
-    minCountToHighlight = 2;
+
+    settings = {
+      min_count_to_highlight = 2;
+    };
   };
 
   highlight = {
