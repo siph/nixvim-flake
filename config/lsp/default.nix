@@ -5,6 +5,6 @@
     ./lspsaga.nix
     ./luasnip.nix
     ./nvim-cmp.nix
-    ./zig.nix
+    # ./zig.nix
   ];
 }

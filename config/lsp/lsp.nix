@@ -8,8 +8,8 @@
       enable = true;
 
       servers = {
-        gopls.enable = true;
-        kotlin_language_server.enable = true;
+        gopls.enable = false;
+        kotlin_language_server.enable = false;
         lua_ls.enable = true;
         marksman.enable = false;
         nil_ls.enable = true;
@@ -17,7 +17,7 @@
           enable = true;
           package = null;
         };
-        pylsp.enable = true;
+        pylsp.enable = false;
         yamlls.enable = true;
       };
     };
@@ -49,7 +49,7 @@
     };
 
     jdtls = {
-      enable = true;
+      enable = false;
       settings = {
         # sneak into `.idea` project folder
         cmd = [
