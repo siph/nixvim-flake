@@ -1,10 +1,10 @@
 {
-  autoCmd = [
-    {
-      event = "TextYankPost";
-      group = "highlight_yank";
-      command = "silent! lua vim.highlight.on_yank{higroup='Search', timeout=200}";
-    }
-  ];
-  autoGroups.highlight_yank.clear = true;
+  extraConfigLua = ''
+    vim.api.nvim_create_autocmd("TextYankPost", {
+      desc = "Highlight on yank",
+      callback = function()
+        vim.highlight.on_yank({ higroup = "Search", timeout = 200 })
+      end,
+    })
+  '';
 }
