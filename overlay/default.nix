@@ -3,7 +3,7 @@
   nix-colors,
   nixvim,
   tree-sitter-nu,
-  tree-sitter-surrealdb,
+  tree-sitter-surrealql,
   ...
 }: let
   additions = final: _prev:
@@ -19,9 +19,9 @@
         inherit tree-sitter-nu;
       };
 
-      tree-sitter-surrealdb = final.callPackage ../pkgs/tree-sitter-grammars/surrealdb.nix {
+      tree-sitter-surrealql = final.callPackage ../pkgs/tree-sitter-grammars/surrealql.nix {
         inherit (final.tree-sitter) buildGrammar;
-        inherit tree-sitter-surrealdb;
+        inherit tree-sitter-surrealql;
       };
     };
   };

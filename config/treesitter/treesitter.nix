@@ -5,11 +5,11 @@
       nixvimInjections = true;
 
       languageRegister.nu = "nu";
-      languageRegister.surrealdb = "surrealdb";
+      languageRegister.surrealql = "surrealql";
 
       grammarPackages = with pkgs;
         vimPlugins.nvim-treesitter.passthru.allGrammars
-        ++ (with tree-sitter-grammars; [tree-sitter-nu tree-sitter-surrealdb]);
+        ++ (with tree-sitter-grammars; [tree-sitter-nu tree-sitter-surrealql]);
 
       settings = {
         highlight.enable = true;
@@ -23,7 +23,7 @@
     "/queries/nu/indents.scm".source = "${tree-sitter-nu}/queries/nu/indents.scm";
     "/queries/nu/injections.scm".source = "${tree-sitter-nu}/queries/nu/injections.scm";
 
-    "/queries/surrealdb/highlights.scm".source = "${tree-sitter-surrealdb}/queries/highlights.scm";
+    "/queries/surrealql/highlights.scm".source = "${tree-sitter-surrealql}/queries/highlights.scm";
   };
 
   filetype = {
@@ -36,6 +36,6 @@
 
   extraConfigLua = ''
     vim.treesitter.language.register("nu", "nu")
-    vim.treesitter.language.register("surrealdb", "surql")
+    vim.treesitter.language.register("surrealql", "surql")
   '';
 }

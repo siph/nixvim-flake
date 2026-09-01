@@ -187,7 +187,7 @@
         "nixvim": "nixvim",
         "pre-commit-hooks": "pre-commit-hooks",
         "tree-sitter-nu": "tree-sitter-nu",
-        "tree-sitter-surrealdb": "tree-sitter-surrealdb"
+        "tree-sitter-surrealql": "tree-sitter-surrealql"
       }
     },
     "systems": {
@@ -223,19 +223,19 @@
         "type": "github"
       }
     },
-    "tree-sitter-surrealdb": {
+    "tree-sitter-surrealql": {
       "flake": false,
       "locked": {
-        "lastModified": 1708450003,
-        "narHash": "sha256-/xX5lEQKFuLQl6YxUA2WLKGX5P2GBugtYj42WCtA0xU=",
-        "owner": "dariuscorvus",
-        "repo": "tree-sitter-surrealdb",
-        "rev": "17a7ed4481bdaaa35a1372f3a94bc851d634a19e",
+        "lastModified": 1784846693,
+        "narHash": "sha256-pCGgc/84/CHtLNLwzc7jCE0rgRyGgm/hZA3zd6Wsl7Y=",
+        "owner": "surrealdb",
+        "repo": "surrealql-tree-sitter",
+        "rev": "5b98402dddbc3edfb85d8f555640b33166b71e62",
         "type": "github"
       },
       "original": {
-        "owner": "dariuscorvus",
-        "repo": "tree-sitter-surrealdb",
+        "owner": "surrealdb",
+        "repo": "surrealql-tree-sitter",
         "type": "github"
       }
     }
