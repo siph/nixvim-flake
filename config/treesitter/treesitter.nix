@@ -35,14 +35,7 @@
   };
 
   extraConfigLua = ''
-    local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-
-    parser_config.nu = {
-      filetype = "nu",
-    }
-
-    parser_config.surrealdb = {
-      filetype = "surql",
-    }
+    vim.treesitter.language.register("nu", "nu")
+    vim.treesitter.language.register("surrealdb", "surql")
   '';
 }
